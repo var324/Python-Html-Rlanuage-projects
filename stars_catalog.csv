@@ -1,0 +1,37 @@
+name,temperature,luminosity,radius,spectral_class,star_type
+Sun,5778,1.0,1.0,G,Main Sequence
+Sirius,9940,25.4,1.71,A,Main Sequence
+Vega,9602,40.1,2.36,A,Main Sequence
+Altair,7550,10.6,1.63,A,Main Sequence
+Procyon A,6530,6.9,2.05,F,Main Sequence
+Alpha Centauri A,5790,1.52,1.22,G,Main Sequence
+Alpha Centauri B,5260,0.5,0.86,K,Main Sequence
+Tau Ceti,5344,0.52,0.79,G,Main Sequence
+Epsilon Eridani,5084,0.34,0.74,K,Main Sequence
+61 Cygni A,4450,0.15,0.67,K,Main Sequence
+61 Cygni B,4040,0.085,0.59,K,Main Sequence
+Barnard's Star,3134,0.0035,0.196,M,Red Dwarf
+Proxima Centauri,3042,0.0017,0.154,M,Red Dwarf
+Wolf 359,2800,0.001,0.16,M,Red Dwarf
+Ross 128,3192,0.0036,0.2,M,Red Dwarf
+Lalande 21185,3400,0.019,0.39,M,Red Dwarf
+Aldebaran,3910,518.0,44.0,K,Red Giant
+Arcturus,4286,170.0,25.0,K,Red Giant
+Pollux,4865,43.0,8.8,K,Red Giant
+Capella,4940,78.7,12.0,K,Giant
+Polaris,6015,2200.0,46.0,F,Supergiant
+Canopus,7350,10700.0,71.0,F,Supergiant
+Deneb,8525,196000.0,203.0,A,Supergiant
+Rigel,12100,120000.0,79.0,B,Blue Supergiant
+Spica,25400,22000.0,7.4,B,Blue Giant
+Bellatrix,22000,6400.0,5.8,B,Blue Giant
+Achernar,15000,3150.0,7.3,B,Blue Giant
+Betelgeuse,3500,126000.0,887.0,M,Red Supergiant
+Antares,3400,75000.0,680.0,M,Red Supergiant
+Mu Cephei,3700,100000.0,1260.0,M,Red Supergiant
+UY Scuti,3365,340000.0,1708.0,M,Hypergiant
+VY Canis Majoris,3490,270000.0,1420.0,M,Hypergiant
+Sirius B,25200,0.056,0.0084,DA,White Dwarf
+Procyon B,7740,0.00049,0.0123,DQZ,White Dwarf
+Van Maanen's Star,6220,0.00068,0.011,DC,White Dwarf
+40 Eridani B,16500,0.013,0.014,DA,White Dwarf

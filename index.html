@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar Astronomy 3D Dashboard</title>
+    <style>
+        /* Base Page Configurations */
+        body {
+            background-color: #050505;
+            color: #cfd8dc;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+        
+        .container {
+            max-width: 1300px; /* Expands frame width to handle wider labels and images comfortably */
+            margin: 0 auto;
+        }
+        
+        /* Header Block Layout */
+        header {
+            border-bottom: 1px solid #263238;
+            padding-bottom: 24px;
+            margin-bottom: 35px;
+        }
+        
+        h1 {
+            color: #ffffff;
+            font-size: 2.4rem;
+            margin: 0 0 12px 0;
+            letter-spacing: -0.5px;
+        }
+        
+        header p {
+            line-height: 1.6;
+            color: #90a4ae;
+            margin: 0;
+            font-size: 1.05rem;
+        }
+        
+        /* Historical Scientists Gallery Row */
+        .pioneers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 35px;
+        }
+        
+        .pioneer-card {
+            background-color: #0a0a0a;
+            border: 1px solid #263238;
+            border-radius: 8px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center portraits horizontally */
+            text-align: center;   /* Center headings/titles */
+        }
+
+        /* Portrait Avatar Container */
+        .avatar-container {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%; /* Perfect circle */
+            overflow: hidden;    /* Clips image edges */
+            border: 3px solid #263238; /* Border frame */
+            margin-bottom: 18px;
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .avatar-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures image covers circle perfectly */
+        }
+        
+        .pioneer-card h4 {
+            color: #ffffff;
+            margin: 0 0 4px 0;
+            font-size: 1.25rem;
+        }
+        
+        .pioneer-card .role {
+            color: #80deea;
+            font-size: 0.88rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+        }
+        
+        .pioneer-card p {
+            color: #b0bec5;
+            font-size: 0.98rem;
+            line-height: 1.55;
+            margin: 0;
+            text-align: left; /* Keep biography text left-aligned for readability */
+        }
+        
+        /* Educational Analysis Text Content Layout */
+        .educational-notes {
+            margin-bottom: 35px;
+            background-color: #0a0a0a;
+            border: 1px solid #263238;
+            border-radius: 8px;
+            padding: 25px;
+        }
+        
+        .educational-notes h3 {
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            letter-spacing: -0.3px;
+        }
+        
+        .educational-notes p {
+            color: #b0bec5;
+            line-height: 1.6;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+        
+        .educational-notes p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .educational-notes strong {
+            color: #eceff1;
+        }
+        
+        /* Interactive 3D Frame Wrapper Layout */
+        .dashboard-wrapper {
+            background-color: #0a0a0a;
+            border: 1px solid #263238;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            margin-bottom: 35px;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 850px;
+            border: none;
+            display: block;
+        }
+
+        /* Attribution and Credits Footer Layout */
+        footer {
+            border-top: 1px solid #263238;
+            padding-top: 20px;
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-heading {
+            color: #ffffff;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .credits-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px 30px;
+        }
+
+        .credits-list li {
+            font-size: 0.85rem;
+            color: #78909c;
+        }
+
+        .credits-list a {
+            color: #80deea;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .credits-list a:hover {
+            color: #4dd0e1;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1>Hertzsprung-Russell Diagram</h1>
+            <p>The Hertzsprung-Russell diagram (HR diagram) is one of the most important tools in the study of stellar evolution. Developed independently in the early 1900s by Ejnar Hertzsprung and Henry Norris Russell, it plots the temperature of stars against their luminosity (the theoretical HR diagram), or the colour of stars (or spectral type) against their absolute magnitude (the observational HR diagram, also known as a colour-magnitude diagram).</p>
+        </header>
+
+        <section class="pioneers-grid">
+            
+            <div class="pioneer-card">
+                <div class="avatar-container">
+                    <img src="hertzsprung.png" alt="Ejnar Hertzsprung">
+                </div>
+                <h4>Ejnar Hertzsprung</h4>
+                <div class="role">Danish Astronomer (1873–1967)</div>
+                <p>
+                    Published the earliest structural framework in 1905 and 1907. He discovered that stars of the same temperature could possess radically different intrinsic brightnesses, introducing the baseline partition between massive <strong>Giants</strong> and typical <strong>Main Sequence</strong> stars.
+                </p>
+            </div>
+            
+            <div class="pioneer-card">
+                <div class="avatar-container">
+                    <img src="russell.png" alt="Henry Norris Russell">
+                </div>
+                <h4>Henry Norris Russell</h4>
+                <div class="role">American Astrophysicist (1877–1957)</div>
+                <p>
+                    Independently calculated geometric paths to nearby clusters, plotting absolute magnitude against spectral class in 1913. His definitive graphical scatter mapping formalized this dataset worldwide, turning the chart into a standard reference tool.
+                </p>
+            </div>
+            
+            <div class="pioneer-card">
+                <div class="avatar-container">
+                    <img src="payne.png" alt="Cecilia Payne-Gaposchkin">
+                </div>
+                <h4>Cecilia Payne-Gaposchkin</h4>
+                <div class="role">British-American Astronomer (1900–1979)</div>
+                <p>
+                    Decoded the physical meaning of the plane in her monumental 1925 PhD thesis. She proved that the X-axis mapping letters represent changing thermal ionization <strong>Temperatures</strong> rather than chemical discrepancies, and discovered stars are mostly hydrogen.
+                </p>
+            </div>
+            
+        </section>
+
+        <section class="educational-notes">
+            <h3>How the H-R Diagram Decodes the Universe</h3>
+            
+            <p>Depending on its initial mass, every star goes through specific evolutionary stages dictated by its internal structure and energy production. By simply determining a star's temperature and luminosity, astronomers can pinpoint its exact position on the Hertzsprung-Russell (H-R) diagram to understand its internal structure and evolutionary stage.</p>
+
+            <p><strong>1. The Main Sequence (Luminosity Class V):</strong> 
+            Stretching from the upper left (hot, luminous stars) to the bottom right (cool, faint stars), this diagonal spine dominates the H-R diagram. Stars spend roughly 90% of their lives here fusing hydrogen into helium. For reference, our Sun sits on the main sequence with a luminosity of 1 and a temperature of around 5,400 Kelvin.
+            </p>
+
+            <p><strong>2. Giants and Supergiants (Luminosity Classes I&ndash;III):</strong> 
+            Occupying the region above the main sequence, these stars have exhausted their core hydrogen and are now fusing heavier elements. According to the Stefan-Boltzmann law, their low surface temperatures and high luminosities dictate that they must have colossal physical radii.
+            </p>
+
+            <p><strong>3. White Dwarfs (Luminosity Class D):</strong> 
+            Found in the bottom left corner, these are the Earth-sized, cooling remnants of low- to intermediate-mass stars. Despite being very hot, their small size gives them exceptionally low luminosities.
+            </p>
+
+            <p><strong>Cosmic Applications:</strong> 
+            Astronomers use the H-R diagram to summarize stellar evolution and investigate collections of stars. By plotting an H-R diagram for a globular or open star cluster, astronomers can estimate the cluster's age based on where stars begin to turn off from the main sequence.
+            </p>
+        </section>
+
+        <div class="dashboard-wrapper">
+            <iframe src="hr_interactive_3d.html"></iframe>
+        </div>
+
+        <footer>
+            <p class="footer-heading">Data & Media Attributions</p>
+            <ul class="credits-list">
+                <li><strong>Theoretical Physics Context:</strong> <a href="https://astronomy.swin.edu.au/cosmos/h/hertzsprung-russell+diagram" target="_blank" rel="noopener noreferrer">Swinburne COSMOS Portal</a></li>
+                <li><strong>Cecilia Payne Portrait Source:</strong> <a href="https://www.gettyimages.com/photos/cecilia-payne-gaposchkin" target="_blank" rel="noopener noreferrer">Getty Images Archive</a></li>
+                <li><strong>Henry Norris Russell Portrait Source:</strong> <a href="https://www.alamy.com/stock-photo/henry-norris-russell.html?sortBy=relevant" target="_blank" rel="noopener noreferrer">Alamy Stock Collection</a></li>
+                <li><strong>Ejnar Hertzsprung Portrait Source:</strong> <a href="https://www.alamy.com/stock-photo/ejnar-hertzsprung.html?sortBy=relevant" target="_blank" rel="noopener noreferrer">Alamy Historical Images</a></li>
+            </ul>
+        </footer>
+        
+    </div>
+
+</body>
+</html>
